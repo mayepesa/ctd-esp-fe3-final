@@ -25,9 +25,24 @@ h1{
 
 nav{
   display: flex;
-  width: 80vw;
-  justify-content: flex-start;
-  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: gray;
+}
+
+.theme-btn{
+  border-radius: 30px;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+
+}
+
+.theme-btn > img{
+  width: 20px;
 }
 
 a{
@@ -66,18 +81,41 @@ form{
   flex-direction: column;
   justify-content: space-around;
   width: 300px;
-  height: 100px;
+  height: 200px;
   margin: 0 auto;
+  padding: 30px;
+  background-color: gray;
+  border-radius: 20px;
+}
+
+.form > div{
+  display:flex;
+  flex-direction: column;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .card{
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  width: 200px;
+  width: 100%;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
+  border-radius: 20px;
+  background-color: rgb(73, 87, 191);
+  color: white;
+}
+
+.card > img{
+  width: 100%;
+  border-radius: 20px;
 }
 
 .card:hover{
@@ -85,13 +123,10 @@ form{
 }
 
 .card-grid{
-  display: flex;
-  justify-content: space-evenly;
-  gap: 1rem;
-  width: 90vw;
-  height: auto;
-  flex-wrap: wrap;
-  margin: 0 auto;
+  display: grid;
+  width: 80%;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
 }
 
 table {
@@ -99,7 +134,7 @@ table {
     border-spacing: 0;
     width: 100%;
     display: table;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
 
 }
 
