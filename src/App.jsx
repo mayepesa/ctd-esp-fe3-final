@@ -5,12 +5,12 @@ import { ContextProvider } from "./Components/utils/global.context";
 
 function App() {
   return (
-    <ContextProvider >
-      
+    <ContextProvider>
+      <div className="root">
         <Navbar />
         <Outlet />
         <Footer />
-      
+      </div>
     </ContextProvider>
   );
 }

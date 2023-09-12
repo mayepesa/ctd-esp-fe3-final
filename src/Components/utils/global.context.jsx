@@ -12,13 +12,13 @@ export const initialState = {
       font: "black",
       backgroundColor: "#EEF1FF",
       navBackground: "#D2DAFF",
-      cardBackground: "#AAC4FF"
+      cardBackground: "#c2d4ff"
     },
     dark: {
       font: "white",
       backgroundColor: "#352F44",
       navBackground: "#5C5470",
-      cardBackground: "#B9B4C7"
+      cardBackground: "#5e5a6e"
     },
   },
   data: [],

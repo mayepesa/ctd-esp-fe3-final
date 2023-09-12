@@ -1,0 +1,27 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: gray;
+  height: 3rem;
+  z-index: 1;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.link {
+  font-weight: 600;
+}
+.themeBtn {
+  border-radius: 30px;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  margin: 0;
+  margin-left: 2rem;
+}
+
+.themeBtnIcon {
+  width: 20px;
+}

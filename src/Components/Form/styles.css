@@ -1,0 +1,56 @@
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 300px;
+  min-height: 200px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 6px 4px rgba(192, 184, 184, 0.25);
+}
+
+.contactForm > div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+}
+
+.contactInput {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid rgb(104, 109, 186);
+  font-weight: 600;
+}
+
+.contactSubmitBtn {
+  border-radius: 8px;
+  border: 1px solid rgb(191, 178, 178);
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  box-shadow: 0px 4px 6px 4px rgba(192, 184, 184, 0.25);
+  margin-top: 2rem;
+}
+.contactSubmitBtn:hover {
+  border-color: rgb(104, 109, 186);
+}
+.contactSubmitBtn:focus,
+.contactSubmitBtn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+.error {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}
+
+.successMsg {
+  text-align: center;
+}
