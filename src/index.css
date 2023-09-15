@@ -27,7 +27,7 @@ a:hover {
   color: rgb(136, 136, 136);
 }
 
-.root{
+.root {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -39,7 +39,6 @@ a:hover {
   flex-direction: column;
   align-items: center;
   padding: 0 2rem 3rem;
-
 }
 
 .card-grid {
@@ -77,12 +76,195 @@ tr:nth-child(even) {
   color: white;
 }
 
-.contactContainer{
+.contactContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2rem 1rem 4rem;
   height: 100%;
+}
 
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 220px;
+  height: 400px;
+  padding: 0.5rem;
+  border: 0.5px solid rgb(136, 136, 136);
+  border-radius: 20px;
+  background-color: rgb(73, 87, 191);
+  color: white;
+}
+
+.card > img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.card:hover {
+  border: 0.5px solid rgb(206, 217, 142);
+}
+
+.favButton {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.favButton:hover {
+  transform: scale(1.02);
+}
+
+.favButton:active {
+  background-color: rgb(104, 104, 104);
+  color: gray;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  height: 40px;
+}
+
+.dhContainer {
+  display: flex;
+  align-items: center;
+}
+
+.dhLogo {
+  width: 200px;
+  margin: 0;
+}
+
+.socialIcon {
+  width: 24px;
+  margin: 4px;
+  color: black;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 300px;
+  min-height: 200px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 6px 4px rgba(192, 184, 184, 0.25);
+}
+
+.contactForm > div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+}
+
+.contactInput {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid rgb(104, 109, 186);
+  font-weight: 600;
+}
+
+.contactSubmitBtn {
+  border-radius: 8px;
+  border: 1px solid rgb(191, 178, 178);
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  box-shadow: 0px 4px 6px 4px rgba(192, 184, 184, 0.25);
+  margin-top: 2rem;
+}
+.contactSubmitBtn:hover {
+  border-color: rgb(104, 109, 186);
+}
+.contactSubmitBtn:focus,
+.contactSubmitBtn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+.error {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}
+
+.successMsg {
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: gray;
+  height: 3rem;
+  z-index: 1;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.link {
+  font-weight: 600;
+}
+.themeBtn {
+  border-radius: 30px;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  margin: 0;
+  margin-left: 2rem;
+}
+
+.themeBtn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.themeBtnIcon {
+  width: 20px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.star {
+  height: 2rem;
+  width: 2rem;
+}
+
+.star:hover {
+  transform: scale(1.2);
+}
+.removeBtn {
+  border: 1px solid gray;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  background-color: transparent;
+}
+
+.removeBtn:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }

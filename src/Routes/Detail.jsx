@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+import { ContextGlobal } from "../Components/utils/global.context";
 
 const Detail = () => {
+  const { theme } = useContext(ContextGlobal);
+
   const [dentistData, setDentistData] = useState({});
 
-  // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico params.id
   const params = useParams();
 
   useEffect(() => {
@@ -20,13 +20,31 @@ const Detail = () => {
   }, [params.id]);
 
   return (
-    <>
-      <h1>Detail Dentist id {dentistData.id}</h1>
-      <p>Name: {dentistData.name}</p>
-      <p>Detail: {dentistData.email}</p>
-      <p>Phone: {dentistData.phone}</p>
-      <p>Website: {dentistData.website}</p>
-    </>
+    <div
+      className="detail"
+      style={{ backgroundColor: theme.backgroundColor, color: theme.font }}
+    >
+      <h1>Detail Dentist with id: {dentistData.id}</h1>
+
+      <table style={{ width: 700 }}>
+        <thead>
+          <tr>
+            <th>Name:</th>
+            <th>Detail:</th>
+            <th>Phone:</th>
+            <th>Website:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{dentistData.name}</td>
+            <td>{dentistData.email}</td>
+            <td>{dentistData.phone}</td>
+            <td>{dentistData.website}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   );
 };
 

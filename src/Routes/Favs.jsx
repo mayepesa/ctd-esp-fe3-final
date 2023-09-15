@@ -3,9 +3,7 @@ import Card from "../Components/Card";
 import { ContextGlobal } from "../Components/utils/global.context";
 
 const Favs = () => {
-  const { theme } = useContext(ContextGlobal);
-
-  const favs = JSON.parse(localStorage.getItem("favs")) ?? [];
+  const { theme, favs, handleRemoveFavs } = useContext(ContextGlobal);
 
   return (
     <div
@@ -13,10 +11,11 @@ const Favs = () => {
       style={{
         backgroundColor: theme.backgroundColor,
         color: theme.font,
-        height: favs.length !== 0 ? "":"100%"
+        height: favs?.length !== 0 ? "" : "100%",
       }}
     >
       <h1>Favs</h1>
+
       <div className="card-grid">
         {favs &&
           favs.map((dentist, index) => (
@@ -28,6 +27,13 @@ const Favs = () => {
             />
           ))}
       </div>
+      <button
+        className="removeBtn"
+        onClick={handleRemoveFavs}
+        style={{ color: theme.font }}
+      >
+        Remove all favorites
+      </button>
     </div>
   );
 };
